@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { SectorsModule } from './sectors/sectors.module';
+import { EmissionsModule } from './emissions/emissions.module';
 
 @Module({
   imports: [
@@ -18,6 +20,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: true, // pratique en dev, à désactiver en prod
       }),
     }),
+    SectorsModule,
+    EmissionsModule,
   ],
 })
 export class AppModule {}
