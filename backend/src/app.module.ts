@@ -17,7 +17,7 @@ import { EmissionsModule } from './emissions/emissions.module';
         password: config.get('DB_PASSWORD'),
         database: config.get('DB_NAME'),
         autoLoadEntities: true,
-        synchronize: true, // pratique en dev, à désactiver en prod
+        synchronize: process.env.NODE_ENV !== 'production',
       }),
     }),
     SectorsModule,
