@@ -42,48 +42,11 @@ la même base qu'utilisent les outils de R3 pour les bilans carbone.
 
 ---
 
-## 🚀 Lancer le projet
+## 🌐 Demo
 
-### Prérequis
+👉 [Voir le dashboard en ligne](https://superb-dream-production-30f9.up.railway.app/)
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Node.js 18+
-- npm
-
-### 1. Cloner le repo
-```bash
-git clone https://github.com/TON_USERNAME/r3-carbon-dashboard.git
-cd r3-carbon-dashboard
-```
-
-### 2. Lancer la base de données
-```bash
-docker compose up -d
-```
-
-### 3. Lancer le backend
-```bash
-cd backend
-cp .env.example .env   # adapter si besoin
-npm install
-npm run start:dev
-```
-
-L'API est disponible sur `http://localhost:3001`.
-
-### 4. Peupler la base de données
-```bash
-npx ts-node src/seed.ts
-```
-
-### 5. Lancer le frontend
-```bash
-cd ../frontend
-npm install
-npm run dev
-```
-
-Le dashboard est disponible sur `http://localhost:5173`.
+**API** : `https://r3-carbon-dashboard-production.up.railway.app/`
 
 ---
 
